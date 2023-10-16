@@ -1,6 +1,6 @@
 body{
     font-family: Manrope,Inter,system-ui,sans-serif;
-    background-color: #F9F9F9;
+    background-color: #f1f1f1;
 }
 
 .navigation{
@@ -26,6 +26,12 @@ body{
 .active{
     border-bottom: 2px solid #262626;
     font-weight: 400;
+}
+.title-header{
+    text-align: center;
+}
+.title-header p{
+    font-weight: 300;
 }
 
 @media only screen and (min-width: 768px){
