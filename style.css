@@ -1,6 +1,6 @@
 body{
     font-family: Manrope,Inter,system-ui,sans-serif;
-    background-color: #f1f1f1;
+    background-color: #f1f8e791;
 }
 
 .navigation{
@@ -583,9 +583,153 @@ main h1{
         padding: 0;
         
     }
-   
+
+
+    .slider {
+        width: 100%;
+        margin:auto;
+        overflow: hidden;
+        background-color: #1f1f1f;
+        color: white;
+        box-shadow: 0px 4px 10px #3a3a3aa9;
+        border-radius: 1.5px;
+    }
+    
+    
+
+
 
     
+    /*______________________ Redim __________________________________ */
+    .redim-container{
+        display: grid;
+        grid-template: 
+        'gridOne gridOne' min-content
+        'gridThree gridTwo' 220px / min-content 
+        ;
+        grid-gap: 3px;
+        background-color: black;
+        padding: 4px;
+    }
+
+    .grid-1 h1{
+        font-weight: 600;
+    }
+    .redim-container .grid-2 .lang-tags{
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+   
+    .redim-container .grid-3 .img-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 69%;
+    }
+    .redim-container .grid-3 img{
+        width: 70px;
+    }
+
+
+    /* ________________________________Zero Focus APP_________________________________*/
+    .zero-container{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: min-content;
+        grid-gap: 3px;
+        background-color: black;
+        padding: 4px;
+    }
+
+
+    .zero-container .grid-2 img{
+        width: 350px;
+    }
+   
+
+    /* ________________________________Git Commits CLI_________________________________*/
+    .gitcommit-container{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 60px 151px;
+        grid-gap: 3px;
+        background-color: black;
+        padding: 4px;
+    }
+    
+
+    .gitcommit-container .grid-2 .lang-tags{
+    
+        width: fit-content;
+        margin: 0 auto;
+    } 
+ 
+    /* ________________________________nicdet app_________________________________*/
+    .nicdet-container{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: min-content;
+        grid-gap: 3px;
+        background-color: black;
+        padding: 4px;
+    }
+
+    .nicdet-container .grid-2 .lang-tags{
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .nicdet-container .grid-3 img{
+        width: 350px;
+    }
+
+
+
+    .nicdet-container .grid-1{
+        background-color: #eb7f7f;
+    }
+    .nicdet-container .grid-1 h1{
+        margin: 0;
+        padding: 0 0 0 10px;
+    }
+
+    .nicdet-container .grid-2{
+        background-color: white;
+        padding: 10px;
+        font-weight: 300;
+    }
+
+    .nicdet-container .grid-3{
+        background-color: #fcfcfcfa;
+        text-align: center;
+    }
+
+
+
+
+
+
+    .tags-list{
+        margin-right: 12px;
+        font-size: 13px;
+        font-weight: 300;
+        border-radius: 8px;
+        border: 0.1px solid #26262662;
+        padding: 0px 8px;
+
+    }
+    .tags-ul{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+    
+
+        
 
 
 
