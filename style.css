@@ -605,7 +605,7 @@ main h1{
         display: grid;
         grid-template: 
         'gridOne gridOne' min-content
-        'gridThree gridTwo' 220px / min-content 
+        'gridThree gridTwo' min-content / min-content 
         ;
         grid-gap: 3px;
         background-color: black;
