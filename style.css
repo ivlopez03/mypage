@@ -34,25 +34,279 @@ body{
     font-weight: 300;
 }
 
-@media only screen and (min-width: 768px){
-    main{
-        margin: 0 150px;
+
+.social-links{
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+}
+.social-links ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.social-links li{
+    float: left;
+    margin-right: 15px;
+    
+}
+
+.social-links a{
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+}
+.social-links .has-hover a:hover{
+    font-weight: 600;
+}
+
+.slider {
+    width: 72vh;
+    margin:auto;
+    overflow: hidden;
+    background-color: #1f1f1f;
+    color: white;
+    box-shadow: 0px 4px 10px #3a3a3aa9;
+    border-radius: 1.5px;
+}
+.slider .slide-track{
+    display: flex;
+    animation: scroll 16s linear infinite;
+    -webkit-animation: scroll 16s linear infinite;
+    width: calc(150px * 11);
+    animation-play-state: running;
+}
+
+.slider .slide {
+    width: 200px;
+    font-weight: 300;
+}
+.slider .slide-track:hover{
+    animation-play-state: paused;
+}
+.slide a{
+    text-decoration: none;
+    color: white;
+
+}
+.slide .has-hover:hover{
+    font-weight: 600;
+    transition: ease-in-out 0.2s;
+    
+}
+
+@keyframes scroll{
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-300px * 7));
+        transform: translateX(calc(-200px * 4));
     }
 }
 
-main{
-    margin-top: 40px;
+
+
+
+
+
+/*______________________ Redim __________________________________ */
+.redim-container{
+    display: grid;
+    grid-template: 
+    'gridOne gridThree' 60px
+    'gridTwo gridThree' 150px / 500px 
+    ;
+    grid-gap: 3px;
+    background-color: black;
+    padding: 4px;
 }
 
-main h1{
-    font-size: 40px;
-    margin-bottom: 8px;
+.redim-container .grid-1{
+    background-color: #dff3ff;
+    grid-area: gridOne;
 }
-#about-me{
-    font-size: 25px;
+.redim-container .grid-1 h1{
+    margin: 0;
+    text-align: center;
+}
+
+.redim-container .grid-2{
+    background-color: white;
+    grid-area: gridTwo;
+    padding: 5px;
+}
+.redim-container .grid-2 p{
     font-weight: 300;
-    width: 80%;
 }
+
+
+.redim-container .grid-3{
+    background-color: white;
+    grid-area: gridThree; 
+}
+.redim-container .grid-3 .img-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 87%;
+}
+.redim-container .grid-3 .link{
+    background-color: black;
+    padding: 3px;
+    text-align: center;
+}
+.redim-container .grid-3 .link a{
+    text-decoration: none;
+    color: white;
+    align-items: end;
+}
+.redim-container .grid-3 .link a:hover{
+    text-decoration: underline;
+}
+
+/* ________________________________Zero Focus APP_________________________________*/
+.zero-container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 60px 400px 90px;
+    grid-gap: 3px;
+    background-color: black;
+    padding: 4px;
+}
+.zero-container .grid-1{
+    background-color: #ffffe1;
+   
+}
+
+.grid-1 .header{
+    text-align: center;
+    vertical-align: middle;
+}
+.grid-1 .header h1{
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    top: -3px;
+}
+.grid-1 .header img{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.zero-container .grid-2{
+    background-color: white;
+    text-align: center;
+}
+.zero-container .grid-3{
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+}
+.grid-3 .lang-tags{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+
+/* ________________________________Git Commits CLI_________________________________*/
+.gitcommit-container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 60px 77px;
+    grid-gap: 3px;
+    background-color: black;
+    padding: 4px;
+}
+.gitcommit-container .grid-1{
+    background-color: #edffdc;
+}
+.gitcommit-container .grid-1 h1{
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+.gitcommit-container .grid-2{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.gitcommit-container .grid-2 p{
+    margin-left: 10px;
+}
+
+.gitcommit-container .grid-2 .lang-tags{
+    margin-left: 18px;
+} 
+.gitcommit-container .grid-2 .link{
+    background-color: black;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+.gitcommit-container .grid-2 .link a{
+    text-decoration: none;
+    color: white;
+}
+.gitcommit-container .grid-2 .link a:hover{
+    text-decoration: underline;
+}
+
+/* ________________________________nicdet app_________________________________*/
+.nicdet-container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 60px 120px min-content;
+    grid-gap: 3px;
+    background-color: black;
+    padding: 4px;
+}
+.nicdet-container .grid-1{
+    background-color: #eb7f7f;
+}
+.nicdet-container .grid-1 h1{
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+
+.nicdet-container .grid-2{
+    background-color: white;
+    padding: 10px;
+    font-weight: 300;
+}
+
+.nicdet-container .grid-3{
+    background-color: #fcfcfcfa;
+    text-align: center;
+}
+
+
+
+
+
+
+.tags-list{
+    margin-right: 12px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 8px;
+    border: 0.1px solid #26262662;
+    padding: 0px 8px;
+
+}
+.tags-ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+
+
 
 
 #github{
@@ -143,76 +397,35 @@ main h1{
     margin: 0 auto;
     margin-top: 60px;
 }
-.project-column{
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 22px;
 
+
+@media only screen and (min-width: 768px){
+    main{
+        margin: 0 150px;
+    }
 }
-.project-column p{
+
+main{
+    margin-top: 40px;
+}
+
+main h1{
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+#about-me{
+    font-size: 25px;
     font-weight: 300;
-}
-.project-column ul{
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin-bottom: 15px;
-}
-.project-column li{
-    margin-right: 12px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 8px;
-    border: 0.1px solid #26262662;
-    padding: 0px 8px;
-
-}
-.project-column #redim-logo{
-    float: left;
-}
-.project-column a{
-    text-decoration: none;
-    background-color: #0a1e31;
-    color: white;
-    font-size: 16px;
-    padding: 5px 18px;
-    border-radius: 6px;
-    position: relative;
-    right: -70%;
-}
-.project-column a:hover{
-    background-color: #0a1e31c6;
+    width: 80%;
 }
 
-.green {
-    background-color: #e7ffdaad;
-}
-.yellow{
-    background-color: #feffceea;
-}
-.blue{
-    background-color: #d8ecffdf;
-}
 
-.project-column .header{
-   vertical-align: middle;
-    padding: 0;
-}
 
-.header h2{
-    position: relative;
-    margin: 0;
- 
-    display: inline-block;
-    top: -5px;
-}
-.header img{
-    display: inline-block;
- 
-    margin: 0;
-    padding: 0;
-}
+
+
+
+
+
 
 @media only screen and (max-width: 700px){
 
@@ -356,60 +569,7 @@ main h1{
         margin-top: 60px;
     }
 
-    .project-column{
-        background-color: white;
-        border-radius: 15px;
-        padding: 20px;
-        margin-bottom: 22px;
-    
-    }
-    .project-column p{
-        font-weight: 300;
-    }
-    .project-column ul{
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin-bottom: 15px;
-    }
-    .project-column li{
-        margin-right: 12px;
-        font-size: 10px;
-        font-weight: 300;
-        border-radius: 8px;
-        border: 0.1px solid #26262662;
-        padding: 0px 8px;
-        flex-wrap:wrap;
-    
-    }
-    .project-column a{
-        text-decoration: none;
-        background-color: #0a1e31;
-        color: white;
-        font-size: 12px;
-        padding: 5px 18px;
-        border-radius: 6px;
-        right: 0;
-
-    }
-    .project-column a:hover{
-        background-color: #0a1e31c6;
-    }
-    
-    .green {
-        background-color: #e7ffdaad;
-    }
-    .yellow{
-        background-color: #feffceea;
-    }
-    .blue{
-        background-color: #d8ecffdf;
-    }
-    
-    .project-column .header{
-       vertical-align: middle;
-        padding: 0;
-    }
+   
     
     .header h2{
         position: relative;
@@ -423,13 +583,7 @@ main h1{
         padding: 0;
         
     }
-    .project-column .img-container{
-        width: 300px;
-    }
-    .project-column #redim-logo{
-        float: none;
-    }
-
+   
 
     
 
