@@ -50,17 +50,18 @@ main h1{
     color: #FBFADA;
     padding: 2px 10px;
     border-radius: 0px;
-    font-weight: 300;
-    font-size: 17px;
-    border: 2px solid black;
+    font-size: 15px;
+    font-weight: 600;
     border-radius: 4px;
     transition: ease-in-out 0.3s;
-    background-color: rgba(111, 0, 255, 0.637);
-    box-shadow: -4px 4px 0px 0px #000000ce;
+    background-color: #FBFADA;
+    color: #000000;
+    border: 2px solid #1f1f1f;
+    box-shadow: -4px 4px 0px 0px #fbfadace;
     
 }
 .nav-link:hover{
-    background-color: rgba(139, 6, 255, 0.911);
+    background-color: #fdf97a;
 }
 .goto-p{
     margin-top: 30px;
@@ -351,61 +352,20 @@ main h1{
     }
     
     .redim{ 
-        width: 600px;
-        background-color: #0441aa;
+        font-size: 15px;
+        height: 260px;
     }
     .nicdet{
-        width: 800px;
-        background-color: tomato;
-        color: black;
+        font-size: 15px;
+        height: 300px;
     }
     .cli{
-        width: 300px;
-        height: 200px;
-        background-color: #d4bf00;
-        color: black;
+        font-size: 15px;
+        height: 180px;
     }
     
-    .tag-b{
-        border-color: #000000;
-    }
-    
-    
-    .project-container .github-icon{
-        width: 25px;
-        position: absolute;
-        right: 25px;
-    }
-    
-    .project-container .link-icon{
-        width: 25px;
-        position: absolute;
-        right: 75px;
-    }
-    .project-container .tools{
-        position: absolute;
-        bottom: 20px;
-    }
-    .project-container .tools ul{
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .project-container .tools ul .tag-b{
-        margin-right: 20px;
-        margin-bottom: 7px;
-        padding: 2px 10px;
-        border: 2px solid black;
-        border-radius: 4px;
-    }
     .project-container .tools ul li{
-        margin-right: 20px;
-        margin-bottom: 7px;
-        padding: 2px 10px;
-        border: 2px solid #FBFADA;
-        border-radius: 4px;
+        font-size: 13px;
     }
 
 
