@@ -12,22 +12,46 @@
     <title>Ivan Lopez</title>
 </head>
 <body>
-    <nav class="navigation">
-        <a  href="/" class="nav-link active" >Resume</a>
-        <a  href="projects.html" class="nav-link" >Projects</a>
-    </nav>  
+
     <main>
-        <h1>Ivan Lopez Montaño</h1>
-        <a id="github" href="https://github.com/ivlopez03" target="_blank">github.com/ivlopez03</a>
-        <p id="about-me">Software Developer and Electronics Engineer with a passion for Back-end technologies, Cybersecurity and Generative AI. Currently working as SDET helping the company to deliver quality software. </p>
-        <a href="/assets/Ivan A. Lopez Montaño 2023.pdf" target="_blank" style="color: black;">Curriculum Vitae</a>
+        <section class="intro-section">
+            <div class="intro">
+                <div class="profile-cont">
+                    <img class="profile-img" src="/assets/photo.jpg" alt="">
+                </div>
+                <h1>Ivan Lopez Montaño</h1>
+                <div class="link-h-container">
+                    <a class="link-header github" href="https://github.com/ivlopez03" target="_blank">github.com/ivlopez03</a>
+                    <a  class="link-header" href="/assets/Ivan A. Lopez Montaño 2023.pdf" target="_blank">Curriculum Vitae</a>
+                </div> 
+                <div class="about-me">
+                    <p id="about-me">Software Developer and Electronics Engineer with a passion for Back-end technologies, Cybersecurity and Generative AI. Currently working as SDET helping the company to deliver quality software. </p>
+                </div>               
+                <section class="social-container">
+                    <ul>
+                        <li><a href="ivlopez.dev@gmail.com" target="_blank"><img src="/assets/at.png" alt=""></a></li>
+                        <li><a href="twitter.com/IvlopezDev" target="_blank"><img src="/assets/twitter-alt.png" alt=""></a></li>
+                        <li><a href="linkedin.com/in/ivlopez13" target="_blank"><img src="/assets/linkedin (1).png" alt=""></a></li>
+                        <li><a href="dev.to/ivlopez03" target="_blank"><img src="/assets/dev (4).png" alt=""></a></li>
+                    </ul>
+                </section>
+                
+                <section class="goto-p">
+                    <a  href="#projects" class="nav-link" id="goto-p" >Go to my projects 👇</a>
+                </section>
+            </div>
+        </section>
+       
+
+        
+
         <section class="skills-section info-section">
             <h3>SKILLS</h3>
             <div class="skill-groups">
                 <div class="languages/frameworks skills-columns">
                     <h3>Languages/frameworks</h3>
                     <ul>
-                        <li>Java</li>
+                        <li>Rust</li>
                         <li>NodeJs</li>
                         <li>Javascript</li>
                         <li>Html/css</li>
@@ -88,15 +112,86 @@
                 </div>
             </div>
         </section>
-        <section class="edu-section ">
-            <h3>EDUCATION</h3>
-            <div class="edu-text">
-                <h3>Tecnológico Nacional de México campus Hermosillo</h3>
-                <p>B.S. Electronics Engineering</p>
-                <p>2018-2022</p>
+        <section class="myprojects" id="projects">
+            <h3>PROJECTS</h3>
+            <div class="projects-flex">
+                <div class="projects">
+                    <div class="project-container redim">
+                        <a href="https://marketplace.visualstudio.com/items?itemName=Redimvs.redim"  target="_blank"><img class="link-icon" src="/assets/link-alt.png" alt=""></a>
+                        <a href="https://github.com/ivlopez03/redim" target="_blank"><img class="github-icon" src="/assets/github (4).png" alt=""></a>
+                        <h3>Redim</h3>
+                        <p>Redim is a vs code extension for optimizing images using commands. I made this project to participate in @midudev hackathon: Cloudinary CloudCreate, in collaboration with Cloudinary. The project was among the top 10 of 73 projects.</p>
+                        <div class="tools">
+                            <ul>
+                                <li>Typescript</li>
+                                <li>vscode extension</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-container cli">
+                        <a href="https://github.com/ivlopez03/ivcommit-cli" target="_blank"><img class="github-icon" src="/assets/github (4).png" alt=""></a>
+                        <h3>Git Commits CLI</h3>
+                        <p>CLI that helps you to to write better commits messages.</p>
+                        <div class="tools">
+                            <ul>
+                                <li class="tag-b">NodeJs</li>
+                                <li class="tag-b">Javascript</li>
+                                <li class="tag-b">Git</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-container nicdet">
+                        <h3>Nicdet Management system</h3>
+                        <p>During my internship I created a web application to manage laboratory equipment maintenance and product inventory. Where I applied CRUD operations,APIs,Authentication & authorization and cloud storage.</p>
+                        <div class="tools">
+                            <ul>
+                                <li class="tag-b">NodeJs</li>
+                                <li class="tag-b">Express</li>
+                                <li class="tag-b">Mysql</li>
+                                <li class="tag-b">Html/css</li>
+                                <li class="tag-b">Cloud hosting</li>
+                                <li class="tag-b">Git</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
     </main>
+    <script>
+        function smoothScroll(target, duration) {
+            var target = document.querySelector(target);
+            var targetPosition = target.getBoundingClientRect().top;
+            var startPosition = window.pageYOffset;
+            var distance = targetPosition - startPosition;
+            var startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                var timeElapsed = currentTime - startTime;
+                var run = easing(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            function easing(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 *t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        var projects = document.querySelector('#goto-p');
+        var projectsLink = document.querySelector('a[href="#projects"]');
+
+        projectsLink.addEventListener('click', function() {
+            smoothScroll('#projects', 800);
+        });
+    </script>
 </body>
 </html>
