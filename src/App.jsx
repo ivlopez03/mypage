@@ -21,7 +21,7 @@ function App() {
         <div className='mt-20 p-10 flex-1 '>
           <a href='https://marketplace.visualstudio.com/items?itemName=Redimvs.redim' target='_blank' className='flex gap-4 p-2 border border-white  rounded-xl hover:shadow-md hover:border-base-300  m-2 transition duration-300'>
             <div>
-              <img src="./src/assets/redim_logo.png" alt="redim" className='w-[104px] min-w-[104px]' />
+              <img src="./mypage/src/assets/redim_logo" alt="redim" className='w-[104px] min-w-[104px]' />
             </div>
             <div className='mt-2'>
               <p className='text-xl'>Redim Optimizer</p>
@@ -31,7 +31,7 @@ function App() {
 
           <div className='flex gap-4 p-2 border border-white  rounded-xl hover:shadow-md hover:border-base-300  m-2 transition duration-300'>
             <div>
-              <img src="./src/assets/icon.png" alt="redim" className='w-[104px] min-w-[104px]' />
+              <img src="./mypage/src/assets/icon.png" alt="redim" className='w-[104px] min-w-[104px]' />
             </div>
             <div className='mt-2'>
               <p className='text-xl flex items-center gap-2'>tasqie <span className='bg-base-200 px-1 text-[11px] rounded-md '>Coming soon </span> </p>
